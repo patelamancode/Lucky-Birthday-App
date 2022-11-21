@@ -6,10 +6,10 @@
     background-color: rgb(134, 55, 207);
  }
 
- #main-container {
+ #main-container #display-container{
     display: flex;
     flex-direction: column;
-    width: 40vw;
+    width: 50vw;
     margin: auto;
     margin-top: 2rem;
     padding: 10px;
@@ -44,12 +44,5 @@
 
  #graphic-container{
     display: none;
-    flex-direction: column;
-    width: 40vw;
-    height: 50vh;
-    margin: auto;
-    margin-top: 2rem;
-    padding: 10px;
-    text-align: center;
     background-color: yellow;
  }
