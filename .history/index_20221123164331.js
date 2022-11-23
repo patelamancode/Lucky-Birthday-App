@@ -29,9 +29,11 @@ function specialDateIs() {
 
 };
 
+
+
 checkButton.addEventListener('click', function () {
     if (userBirthDate.value) {
-        if (parseInt(luckyNumber.value) <= 10  &&  parseInt(luckyNumber.value) > 0) {
+        if (0 < number(luckyNumber.value) <= 10) {
             specialDateIs();
             showResult();
         } else {

@@ -24,20 +24,10 @@ label {
   text-align: left;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  font-weight: 400;
-
 }
 input{
    padding: 1rem;
 }
-
-#error-check{
-   color: red;
-   background-color: yellow;
-   font-style: italic;
-   margin-top: 1rem;
-}
-
 button {
   margin: auto;
   margin-top: 2.5rem;
@@ -76,9 +66,8 @@ button {
 }
 
 #back-btn {
-   padding: 0.5rem;
   position: absolute;
   bottom: 2rem;
-  left: 11rem;
+  left: 10remrem;
   background-color: rgb(199, 185, 185);
 }

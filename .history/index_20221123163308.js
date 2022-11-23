@@ -18,6 +18,9 @@ function hideContent() {
 };
 
 function specialDateIs() {
+    console.log(typeof(userBirthDate.value))
+    console.log(typeof(luckyNumber.value));
+
     let value = userBirthDate.value.split("-");
     var sum = 0;
     for (let i = 0; i < value.length; i++) {
@@ -29,21 +32,22 @@ function specialDateIs() {
 
 };
 
+
+
 checkButton.addEventListener('click', function () {
-    if (userBirthDate.value) {
-        if (parseInt(luckyNumber.value) <= 10  &&  parseInt(luckyNumber.value) > 0) {
+    if(userBirthDate.value){
+        if(0 < luckyNumber.value <= 10){
             specialDateIs();
             showResult();
-        } else {
-            error.innerText = "Please input valid entry as mentioned !!";
-            appContent.style.display = "flex";
-            graphicDisplay.style.display = "none";
+            console.log("right");
         }
-    } else {
+    }else{
         error.innerText = "Please input valid entry as mentioned !!";
         appContent.style.display = "flex";
         graphicDisplay.style.display = "none";
+        console.log("left");
     }
+    
 });
 
 backButton.addEventListener('click', function () {
@@ -51,3 +55,5 @@ backButton.addEventListener('click', function () {
     graphicDisplay.style.display = "none"
     window.location.reload();
 });
+
+

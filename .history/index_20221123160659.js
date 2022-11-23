@@ -5,7 +5,6 @@ const luckyNumber = document.querySelector('.user-number');
 const graphicDisplay = document.querySelector('#graphic-container');
 const backButton = document.querySelector('#back-btn');
 const result = document.querySelector('#final-result');
-const error = document.querySelector('#error-check');
 
 
 function showResult() {
@@ -18,6 +17,7 @@ function hideContent() {
 };
 
 function specialDateIs() {
+    console.log(userBirthDate.value)
     let value = userBirthDate.value.split("-");
     var sum = 0;
     for (let i = 0; i < value.length; i++) {
@@ -30,20 +30,9 @@ function specialDateIs() {
 };
 
 checkButton.addEventListener('click', function () {
-    if (userBirthDate.value) {
-        if (parseInt(luckyNumber.value) <= 10  &&  parseInt(luckyNumber.value) > 0) {
-            specialDateIs();
-            showResult();
-        } else {
-            error.innerText = "Please input valid entry as mentioned !!";
-            appContent.style.display = "flex";
-            graphicDisplay.style.display = "none";
-        }
-    } else {
-        error.innerText = "Please input valid entry as mentioned !!";
-        appContent.style.display = "flex";
-        graphicDisplay.style.display = "none";
-    }
+    specialDateIs();
+    showResult();
+    console.log(value);
 });
 
 backButton.addEventListener('click', function () {

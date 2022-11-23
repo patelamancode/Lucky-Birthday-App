@@ -29,9 +29,11 @@ function specialDateIs() {
 
 };
 
+
+
 checkButton.addEventListener('click', function () {
     if (userBirthDate.value) {
-        if (parseInt(luckyNumber.value) <= 10  &&  parseInt(luckyNumber.value) > 0) {
+        if (0 < luckyNumber.value <= 10) {
             specialDateIs();
             showResult();
         } else {
@@ -39,10 +41,6 @@ checkButton.addEventListener('click', function () {
             appContent.style.display = "flex";
             graphicDisplay.style.display = "none";
         }
-    } else {
-        error.innerText = "Please input valid entry as mentioned !!";
-        appContent.style.display = "flex";
-        graphicDisplay.style.display = "none";
     }
 });
 
