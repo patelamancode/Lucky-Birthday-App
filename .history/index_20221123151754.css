@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ body{
+    background-color: rgb(134, 55, 207);
+ }
+
+ #main-container {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 10px;
+    text-align: center;
+ }
+
+ .app-title{
+    margin: 2rem 0;
+ }
+ label{
+    width: auto;
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+ }
+ /* input{
+    -webkit-appearance: none; 
+    box-shadow: none !important;
+ } */
+ button{
+    margin: auto;
+    margin-top: 2.5rem;
+    width: 30%;
+    padding: 3px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid;
+    background-color: rgb(177, 110, 240);
+    border-radius: 10px;
+ }
+
+/* change in display to flex from none */
+ #graphic-container{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 10px;
+    text-align: center;
+    background-color: yellow;
+    position: relative;
+
+ }
+
+ #back-btn{
+   position: absolute;
+   bottom: 2px;
+ }

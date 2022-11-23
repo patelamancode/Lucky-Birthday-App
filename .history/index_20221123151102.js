@@ -4,7 +4,7 @@ const userBirthDate = document.querySelector('#selected-dob');
 const luckyNumber = document.querySelector('.user-number');
 const graphicDisplay = document.querySelector('#graphic-container');
 const backButton = document.querySelector('#back-btn');
-const result = document.querySelector('#final-result');
+
 
 
 function showResult() {
@@ -16,6 +16,7 @@ function hideContent() {
     appContent.style.display = "none";
 };
 
+
 function specialDateIs() {
     let value = userBirthDate.value.split("-");
     var sum = 0;
@@ -24,18 +25,19 @@ function specialDateIs() {
     }
     console.log(sum);
     if (sum % luckyNumber.value == 0) {
-        result.innerText = "you have a special birthdate 🎇🤗🎉";
-    } else result.innerText = "Opps your birthdate is normal☹️";
+        console.log("you have a special birthdate")
+    } else console.log("Opps your birthdate is normal");
 
 };
 
-checkButton.addEventListener('click', function () {
+
+checkButton.addEventListener('click', function() {
     specialDateIs();
     showResult();
     console.log(value);
 });
 
-backButton.addEventListener('click', function () {
+backButton.addEventListener('click',function(){
     appContent.style.display = "flex";
     graphicDisplay.style.display = "none"
     window.location.reload();
